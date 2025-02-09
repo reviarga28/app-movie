@@ -1,6 +1,8 @@
 import Banner from "@/components/banners/banner";
+import Footer from "@/components/footers/footer";
+import MovieCard from "@/components/movieCard/movieCard";
+import MovieList from "@/components/movieList/movieList";
 import Navbars from "@/components/navbars/navbars";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,6 +12,9 @@ export default function Home() {
     <div>
       <Navbars/>
       <Banner/>
+      <MovieList/>
+      <MovieCard/>
+      <Footer/>
     </div>
   );
 }
