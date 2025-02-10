@@ -5,7 +5,7 @@ import SearchBar from "../inputs/search";
 
 export default function Navbars() {
   return (
-    <div className="flex justify-between h-16 w-full items-center px-6 bg-gray-900">
+    <div className="fixed top-0 left-0 right-0 z-10 flex justify-between h-16 w-full items-center px-6 bg-gray-900 ">
       <div className="flex gap-4 items-center">
         <Link href={"/"}>
         <Image src="/favicon.ico" alt="logo" width={40} height={40} className=""/>
