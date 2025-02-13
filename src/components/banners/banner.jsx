@@ -1,21 +1,3 @@
-// import Image from "next/image";
-
-// export default function () {
-    //   return (
-        //     <div className="relative w-full">
-//       <Image src={Banner} className="w-full" />
-//       <div className="absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/2">
-//         <h1 className="text-5xl text-white">Petualangan Terakhir</h1>
-//         <p className="text-lg font-normal font-sans text-white w-2/3">
-//           Saksikan petualangan epik dalam film terbaru yang akan membawa Anda ke
-//           dunia penuh aksi dan ketegangan.
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -77,9 +59,18 @@ export default function HeroCarousel() {
         dragConstraints={{ left: -200, right: 200 }}
       >
         {slides.map((slide) => (
-          <div key={slide.id} className="relative min-w-full h-[500px] md:h-[600px] flex items-center justify-center">
+          <div
+            key={slide.id}
+            className="relative min-w-full h-[500px] md:h-[600px] flex items-center justify-center"
+          >
             {/* Background Image */}
-            <Image src={slide.img} alt={slide.title} layout="fill" objectFit="cover" className="absolute inset-0" />
+            <Image
+              src={slide.img}
+              alt={slide.title}
+              fill
+              style={{ objectFit: "cover" }}
+              className="absolute inset-0"
+            />
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent" />
@@ -87,10 +78,15 @@ export default function HeroCarousel() {
             {/* Content */}
             <div className="relative right-96 top-24 z-10 text-white px-6 max-w-2xl">
               <h1 className="text-4xl md:text-5xl font-bold">{slide.title}</h1>
-              <p className="mt-3 text-lg font-normal md:text-xl">{slide.desc}</p>
+              <p className="mt-3 text-lg font-normal md:text-xl">
+                {slide.desc}
+              </p>
 
               {/* Button */}
-              <AllButtons title="▶ Tonton Sekarang" classname="mt-5 px-6 py-3 bg-black text-white font-semibold rounded-sm shadow-lg hover:bg-gray-300 transition"/>
+              <AllButtons
+                title="▶ Tonton Sekarang"
+                classname="mt-5 px-6 py-3 bg-black text-white font-semibold rounded-sm shadow-lg hover:bg-gray-300 transition"
+              />
             </div>
           </div>
         ))}

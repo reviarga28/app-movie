@@ -36,7 +36,7 @@ export default function MovieList() {
             key={category.id}
             className="flex flex-col justify-center items-center rounded-sm bg-gray-800 w-20 h-20"
           >
-            <Image src={category.image} alt={category.text} width={15} height={20} className="flex justify-center items-center" />
+            <Image src={category.image} alt={category.text} priority width={15} height="auto" className="flex justify-center items-center" />
             <h1 className="text-md font-sans text-white items-center">
               {category.text}
             </h1>
